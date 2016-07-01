@@ -15,7 +15,7 @@ clear
 echo '缓存当前的代码'
 git fetch
 
-saveInfo=git stash save "Morning !!!"
+git stash save "Morning !!!"
 echo ${saveInfo}
 
 echo '合并远端代码'
@@ -25,8 +25,6 @@ git pull origin develop
 
 git push
 
-exit
-
 clean
 echo '更新内容'
 cd ${innerPath}
@@ -35,7 +33,13 @@ pod install --no-repo-update
 clean
 echo '打开工程'
 open /Applications/SourceTree.app/
-open TravelGuideMdd.xcworkspace
+open /Applications/Xcode.app/ TravelGuideMdd.xcworkspace
+
+exit
+
+//====================================
+//    TODO:自动构建App
+//====================================
 
 clean
 echo '构建工程'
