@@ -25,12 +25,12 @@ git pull origin develop
 
 git push
 
-clean
+clear
 echo '更新内容'
 cd ${innerPath}
 pod install --no-repo-update
 
-clean
+clear
 echo '打开工程'
 open /Applications/SourceTree.app/
 open /Applications/Xcode.app/ TravelGuideMdd.xcworkspace
